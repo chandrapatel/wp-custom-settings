@@ -8,7 +8,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       WP Custom Settings
- * Plugin URI:        https://chandrapatel.in
+ * Plugin URI:        https://github.com/chandrapatel/wp-custom-settings
  * Description:       Allows developers to create a custom admin menu page with settings using Settings API without registering callbacks to every settings section and field.
  * Version:           0.1
  * Requires at least: 5.0
