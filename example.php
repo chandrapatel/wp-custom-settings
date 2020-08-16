@@ -13,7 +13,8 @@
 function wp_register_custom_settings() {
 
 	$custom_settings = new WP_Custom_Settings(
-		// Arguments to add menu page.
+		// Arguments to add menu page. Following arguments are same as add_menu_page() function arguments.
+		// Callback argument does not needed.
 		[
 			'page_title' => __( 'Custom Settings', 'wp-custom-settings' ),
 			'menu_title' => __( 'Custom Settings', 'wp-custom-settings' ),
@@ -22,7 +23,7 @@ function wp_register_custom_settings() {
 			'icon_url'   => '',
 			'position'   => null,
 		],
-		// Arguments to register setting.
+		// Arguments to register setting. Following arguments are same as register_setting() function arguments.
 		[
 			'option_group' => 'wp_custom_settings_group',
 			'option_name'  => 'wp_custom_settings_options',
@@ -37,15 +38,15 @@ function wp_register_custom_settings() {
 		// Arguments to add sections and fields.
 		[
 			new WP_Custom_Settings_Section(
-				'wp_custom_settings_section',
-				__( 'Section Title.', 'wp-custom-settings' ),
-				__( 'Section Description.', 'wp-custom-settings' ),
+				'wp_custom_settings_section', // ID.
+				__( 'Section Title.', 'wp-custom-settings' ), // Title.
+				__( 'Section Description.', 'wp-custom-settings' ), // Description.
 				[
 					new WP_Custom_Settings_Field(
-						'text',
-						'wp_custom_settings_field',
-						__( 'Field Title', 'wp-settings-api-wrapper' ),
-						[
+						'text', // Field type.
+						'wp_custom_settings_field', // ID. Also, it will used for "name" attribute.
+						__( 'Field Title', 'wp-settings-api-wrapper' ), // Title.
+						[ // Pass additional arguments.
 							'description' => 'Description of Custom Settings.',
 							'label_for'   => 'wp_custom_settings_field',
 							'class'       => 'regular-text',
