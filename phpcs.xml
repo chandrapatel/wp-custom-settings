@@ -2,10 +2,7 @@
 <ruleset name="WordPress-Coding-Standards">
 	<description>WordPress Coding Standards</description>
 
-	<rule ref="WordPress">
-		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
-		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
-	</rule>
+	<rule ref="WordPress"/>
 
 	<rule ref="PHPCompatibility">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
@@ -15,5 +12,4 @@
 
 	<arg name="extensions" value="php,js"/>
 	<arg value="s"/>
-
 </ruleset>

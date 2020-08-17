@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+/.gitattributes export-ignore
+/README.md export-ignore
+/example.php export-ignore
+/phpcs.xml export-ignore
