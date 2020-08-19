@@ -6,6 +6,7 @@ Allows developers to create a custom admin menu page with settings using Setting
 
 - Text
 - Textarea
+- Select
 
 *I'll add other input fields support.*
 
@@ -15,7 +16,7 @@ Allows developers to create a custom admin menu page with settings using Setting
 
 You need to create an object of `WP_Custom_Settings` class and it accepts three arguments to create menu page, register setting and sections & fields.
 
-I have added [example.php](https://github.com/chandrapatel/wp-custom-settings/blob/master/example.php) file.
+Please check [example.php](https://github.com/chandrapatel/wp-custom-settings/blob/master/example.php) file.
 
 ```php
 $custom_settings = new WP_Custom_Settings(

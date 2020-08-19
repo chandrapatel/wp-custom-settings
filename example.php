@@ -2,7 +2,7 @@
 /**
  * Custom Settings example by using WP Settings API Wrapper.
  *
- * @package wp-settings-api-wrapper
+ * @package wp-custom-settings
  */
 
 /**
@@ -44,11 +44,27 @@ function wp_register_custom_settings() {
 				[
 					new WP_Custom_Settings_Field(
 						'text', // Field type.
-						'wp_custom_settings_field', // ID. Also, it will used for "name" attribute.
-						__( 'Field Title', 'wp-settings-api-wrapper' ), // Title.
+						'wp_custom_settings_text_field', // ID. Also, it will used for "name" attribute.
+						__( 'Text Input', 'wp-custom-settings' ), // Title.
 						[ // Pass additional arguments.
-							'description' => 'Description of Custom Settings.',
-							'label_for'   => 'wp_custom_settings_field',
+							'description' => 'Description of text field.',
+							'label_for'   => 'wp_custom_settings_text_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'select', // Field type.
+						'wp_custom_settings_select_field', // ID. Also, it will used for "name" attribute.
+						__( 'Select Input', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'options'     => [
+								''         => 'Select Option',
+								'option-1' => 'Option 1',
+								'option-2' => 'Option 2',
+								'option-3' => 'Option 3',
+							],
+							'description' => 'Description of select field.',
+							'label_for'   => 'wp_custom_settings_select_field',
 							'class'       => 'regular-text',
 						]
 					),
@@ -61,11 +77,11 @@ function wp_register_custom_settings() {
 				[
 					new WP_Custom_Settings_Field(
 						'textarea',
-						'wp_custom_settings_field_1',
+						'wp_custom_settings_textarea_field',
 						__( 'Field Title 1', 'wp-custom-settings' ),
 						[
-							'description' => 'Description of Custom Settings Field 1.',
-							'label_for'   => 'wp_custom_settings_field_2',
+							'description' => 'Description of textarea field.',
+							'label_for'   => 'wp_custom_settings_textarea_field',
 							'class'       => 'large-text',
 						]
 					),

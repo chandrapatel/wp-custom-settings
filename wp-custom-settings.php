@@ -379,7 +379,9 @@ class WP_Custom_Settings_Field {
 			case 'textarea':
 				$this->display_textarea_field( $field_value );
 				break;
-
+			case 'select':
+				$this->display_select_field( $field_value );
+				break;
 			case 'text':
 			default:
 				$this->display_text_field( $field_value );
@@ -434,6 +436,45 @@ class WP_Custom_Settings_Field {
 			esc_textarea( $field_value ),
 			esc_attr( $class )
 		);
+
+	}
+
+	/**
+	 * Display select field.
+	 *
+	 * @param string $field_value Field value.
+	 *
+	 * @return void
+	 */
+	private function display_select_field( $field_value ) {
+
+		$class   = isset( $this->args['class'] ) ? $this->args['class'] : 'regular-text';
+		$options = isset( $this->args['options'] ) ? $this->args['options'] : [];
+
+		if ( empty( $options ) || ! is_array( $options ) ) {
+			printf(
+				'<p class="description" style="color: red;">%s</p>',
+				esc_html__( 'Options are missing or does not in array format.' )
+			);
+		}
+
+		printf(
+			'<select id="%1$s" name="%2$s[%1$s]" class="%3$s">',
+			esc_attr( $this->id ),
+			esc_attr( $this->option_name ),
+			esc_attr( $class )
+		);
+
+		foreach ( $options as $value => $label ) {
+			printf(
+				'<option value="%1$s" %2$s>%3$s</option>',
+				esc_attr( $value ),
+				selected( $field_value, $value, false ),
+				esc_html( $label )
+			);
+		}
+
+		echo '</select>';
 
 	}
 
