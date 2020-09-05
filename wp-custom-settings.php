@@ -385,6 +385,9 @@ class WP_Custom_Settings_Field {
 			case 'checkbox':
 				$this->display_checkbox_field( $field_value );
 				break;
+			case 'radio':
+				$this->display_radio_field( $field_value );
+				break;
 			case 'text':
 			default:
 				$this->display_text_field( $field_value );
@@ -512,6 +515,46 @@ class WP_Custom_Settings_Field {
 			esc_attr( $this->id ),
 			esc_html( $label )
 		);
+
+	}
+
+	/**
+	 * Display radio input type.
+	 *
+	 * @param string $field_value Field value.
+	 *
+	 * @return void
+	 */
+	private function display_radio_field( $field_value ) {
+
+		$class   = isset( $this->args['class'] ) ? $this->args['class'] : '';
+		$options = isset( $this->args['options'] ) ? $this->args['options'] : [];
+
+		if ( empty( $options ) || ! is_array( $options ) ) {
+			printf(
+				'<p class="description" style="color: red;">%s</p>',
+				esc_html__( 'Options are missing or does not in array format.' )
+			);
+		}
+
+		$count = 1;
+		foreach ( $options as $value => $label ) {
+			printf(
+				'<input type="radio" name="%1$s[%2$s]" id="%3$s" value="%4$s" class="%5$s" %6$s />',
+				esc_attr( $this->option_name ),
+				esc_attr( $this->id ),
+				esc_attr( $this->id . $count ),
+				esc_attr( $value ),
+				esc_attr( $class ),
+				checked( $field_value, $value, false )
+			);
+			printf(
+				'<label for="%1$s">%2$s</label><br>',
+				esc_attr( $this->id . $count ),
+				esc_html( $label )
+			);
+			$count++;
+		}
 
 	}
 

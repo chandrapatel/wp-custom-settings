@@ -88,11 +88,24 @@ function wp_register_custom_settings() {
 					new WP_Custom_Settings_Field(
 						'checkbox', // Field type.
 						'wp_custom_settings_checkbox_field', // ID. Also, it will used for "name" attribute.
-						__( 'Checkbox Input', 'wp-custom-settings' ), // Title.
+						__( 'Checkbox Input Type', 'wp-custom-settings' ), // Title.
 						[ // Pass additional arguments.
 							'value'       => '1',
 							'label'       => 'Checkbox label',
 							'description' => 'Description of checkbox input.',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'radio', // Field type.
+						'wp_custom_settings_radio_field', // ID. Also, it will used for "name" attribute.
+						__( 'Radio Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'options'     => [
+								'yes' => 'Yes',
+								'no'  => 'No',
+							],
+							'description' => 'Description of radio field.',
+							'label_for'   => 'wp_custom_settings_radio_field',
 						]
 					),
 				]
