@@ -108,6 +108,116 @@ function wp_register_custom_settings() {
 							'label_for'   => 'wp_custom_settings_radio_field',
 						]
 					),
+					new WP_Custom_Settings_Field(
+						'password', // Field type.
+						'wp_custom_settings_password_field', // ID. Also, it will used for "name" attribute.
+						__( 'Password Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of password input type.',
+							'label_for'   => 'wp_custom_settings_password_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'email', // Field type.
+						'wp_custom_settings_email_field', // ID. Also, it will used for "name" attribute.
+						__( 'Email Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of email input type.',
+							'label_for'   => 'wp_custom_settings_email_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'url', // Field type.
+						'wp_custom_settings_url_field', // ID. Also, it will used for "name" attribute.
+						__( 'URL Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of url input type.',
+							'label_for'   => 'wp_custom_settings_url_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'tel', // Field type.
+						'wp_custom_settings_tel_field', // ID. Also, it will used for "name" attribute.
+						__( 'Tel Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of Tel input type.',
+							'label_for'   => 'wp_custom_settings_tel_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'number', // Field type.
+						'wp_custom_settings_number_field', // ID. Also, it will used for "name" attribute.
+						__( 'Number Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of number input type.',
+							'label_for'   => 'wp_custom_settings_number_field',
+							'class'       => 'small-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'color', // Field type.
+						'wp_custom_settings_color_field', // ID. Also, it will used for "name" attribute.
+						__( 'Color Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of color input type.',
+							'label_for'   => 'wp_custom_settings_color_field',
+							'class'       => 'small-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'date', // Field type.
+						'wp_custom_settings_date_field', // ID. Also, it will used for "name" attribute.
+						__( 'Date Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of date input type.',
+							'label_for'   => 'wp_custom_settings_date_field',
+							'class'       => 'regualr-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'datetime-local', // Field type.
+						'wp_custom_settings_datetime_local_field', // ID. Also, it will used for "name" attribute.
+						__( 'Datetime-local Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of Datetime-local input type.',
+							'label_for'   => 'wp_custom_settings_datetime_local_field',
+							'class'       => 'regular-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'month', // Field type.
+						'wp_custom_settings_month_field', // ID. Also, it will used for "name" attribute.
+						__( 'Month Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of month input type.',
+							'label_for'   => 'wp_custom_settings_month_field',
+							'class'       => 'regualr-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'week', // Field type.
+						'wp_custom_settings_week_field', // ID. Also, it will used for "name" attribute.
+						__( 'Week Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of week input type.',
+							'label_for'   => 'wp_custom_settings_week_field',
+							'class'       => 'regualr-text',
+						]
+					),
+					new WP_Custom_Settings_Field(
+						'time', // Field type.
+						'wp_custom_settings_time_field', // ID. Also, it will used for "name" attribute.
+						__( 'Time Input Type', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'description' => 'Description of time input type.',
+							'label_for'   => 'wp_custom_settings_time_field',
+							'class'       => 'regualr-text',
+						]
+					),
 				]
 			),
 		]

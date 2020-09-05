@@ -389,8 +389,19 @@ class WP_Custom_Settings_Field {
 				$this->display_radio_field( $field_value );
 				break;
 			case 'text':
+			case 'password':
+			case 'email':
+			case 'url':
+			case 'tel':
+			case 'number':
+			case 'color':
+			case 'date':
+			case 'datetime-local':
+			case 'month':
+			case 'week':
+			case 'time':
 			default:
-				$this->display_text_field( $field_value );
+				$this->display_input_field( $field_value );
 				break;
 		}
 
@@ -410,12 +421,13 @@ class WP_Custom_Settings_Field {
 	 *
 	 * @return void
 	 */
-	private function display_text_field( $field_value ) {
+	private function display_input_field( $field_value ) {
 
 		$class = isset( $this->args['class'] ) ? $this->args['class'] : 'regular-text';
 
 		printf(
-			'<input type="text" name="%1$s[%2$s]" id="%2$s" value="%3$s" class="%4$s" />',
+			'<input type="%1$s" name="%2$s[%3$s]" id="%3$s" value="%4$s" class="%5$s" />',
+			esc_attr( $this->type ),
 			esc_attr( $this->option_name ),
 			esc_attr( $this->id ),
 			esc_attr( $field_value ),
