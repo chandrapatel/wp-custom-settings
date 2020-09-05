@@ -382,6 +382,9 @@ class WP_Custom_Settings_Field {
 			case 'select':
 				$this->display_select_field( $field_value );
 				break;
+			case 'checkbox':
+				$this->display_checkbox_field( $field_value );
+				break;
 			case 'text':
 			default:
 				$this->display_text_field( $field_value );
@@ -475,6 +478,40 @@ class WP_Custom_Settings_Field {
 		}
 
 		echo '</select>';
+
+	}
+
+	/**
+	 * Display checkbox input type.
+	 *
+	 * @param string $field_value Field value.
+	 *
+	 * @return void
+	 */
+	private function display_checkbox_field( $field_value ) {
+
+		$class = isset( $this->args['class'] ) ? $this->args['class'] : '';
+		$label = isset( $this->args['label'] ) ? $this->args['label'] : '';
+		$value = isset( $this->args['value'] ) ? $this->args['value'] : '';
+
+		printf(
+			'<input type="hidden" name="%1$s[%2$s]" value="" />',
+			esc_attr( $this->option_name ),
+			esc_attr( $this->id )
+		);
+		printf(
+			'<input type="checkbox" name="%1$s[%2$s]" id="%2$s" value="%3$s" class="%4$s" %5$s />',
+			esc_attr( $this->option_name ),
+			esc_attr( $this->id ),
+			esc_attr( $value ),
+			esc_attr( $class ),
+			checked( $field_value, $value, false )
+		);
+		printf(
+			'<label for="%1$s">%2$s</label><br>',
+			esc_attr( $this->id ),
+			esc_html( $label )
+		);
 
 	}
 

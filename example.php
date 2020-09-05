@@ -38,9 +38,9 @@ function wp_register_custom_settings() {
 		// Arguments to add sections and fields.
 		[
 			new WP_Custom_Settings_Section(
-				'wp_custom_settings_section', // ID.
-				__( 'Section Title.', 'wp-custom-settings' ), // Title.
-				__( 'Section Description.', 'wp-custom-settings' ), // Description.
+				'wp_custom_settings_form_elements_section', // ID.
+				__( 'HTML Form Elements', 'wp-custom-settings' ), // Title.
+				__( 'All the HTML form elements.', 'wp-custom-settings' ), // Description.
 				[
 					new WP_Custom_Settings_Field(
 						'text', // Field type.
@@ -68,13 +68,6 @@ function wp_register_custom_settings() {
 							'class'       => 'regular-text',
 						]
 					),
-				]
-			),
-			new WP_Custom_Settings_Section(
-				'wp_custom_settings_section_1',
-				__( 'Section Title 1.', 'wp-custom-settings' ),
-				__( 'Section Description 1.', 'wp-custom-settings' ),
-				[
 					new WP_Custom_Settings_Field(
 						'textarea',
 						'wp_custom_settings_textarea_field',
@@ -83,6 +76,23 @@ function wp_register_custom_settings() {
 							'description' => 'Description of textarea field.',
 							'label_for'   => 'wp_custom_settings_textarea_field',
 							'class'       => 'large-text',
+						]
+					),
+				]
+			),
+			new WP_Custom_Settings_Section(
+				'wp_custom_settings_input_types_section',
+				__( 'Input Types.', 'wp-custom-settings' ),
+				__( 'All the input types.', 'wp-custom-settings' ),
+				[
+					new WP_Custom_Settings_Field(
+						'checkbox', // Field type.
+						'wp_custom_settings_checkbox_field', // ID. Also, it will used for "name" attribute.
+						__( 'Checkbox Input', 'wp-custom-settings' ), // Title.
+						[ // Pass additional arguments.
+							'value'       => '1',
+							'label'       => 'Checkbox label',
+							'description' => 'Description of checkbox input.',
 						]
 					),
 				]
