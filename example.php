@@ -71,11 +71,11 @@ function wp_register_custom_settings() {
 					new WP_Custom_Settings_Field(
 						'textarea',
 						'wp_custom_settings_textarea_field',
-						__( 'Field Title 1', 'wp-custom-settings' ),
+						__( 'Textarea Input', 'wp-custom-settings' ),
 						[
 							'description' => 'Description of textarea field.',
 							'label_for'   => 'wp_custom_settings_textarea_field',
-							'class'       => 'large-text',
+							'class'       => 'regular-text',
 						]
 					),
 				]

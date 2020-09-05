@@ -2,13 +2,23 @@
 
 Allows developers to create a custom admin menu page with settings using Settings API without registering callbacks to every settings section and field.
 
-## Supported Input Fields
+## Supported form elements and input types
 
-- Text
 - Textarea
 - Select
-
-*I'll add other input fields support.*
+- Input Types
+  - Text
+  - Password
+  - Email
+  - Url
+  - Tel
+  - Number
+  - Color
+  - Date
+  - Datetime-local
+  - Month
+  - Week
+  - Time
 
 **Note:** I'd suggest to add WP Custom Settings main file in your theme or plugin instead of adding as standalone plugin. This way you can modify it as per your need and avoid dependency.
 
@@ -64,3 +74,7 @@ $custom_settings = new WP_Custom_Settings(
 	]
 );
 ```
+
+## Screenshot
+
+![alt text](screenshot.png)
