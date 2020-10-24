@@ -10,7 +10,7 @@
 			"homepage": "https://chandrapatel.in/"
 		}
 	],
-	"type": "wordpress-muplugin",
+	"type": "wordpress-plugin",
 	"support": {
 		"issues": "https://github.com/chandrapatel/wp-custom-settings/issues",
 		"source": "https://github.com/chandrapatel/wp-custom-settings"

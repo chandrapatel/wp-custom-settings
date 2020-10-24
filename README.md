@@ -20,7 +20,15 @@ Allows developers to create a custom admin menu page with settings using Setting
   - Week
   - Time
 
-**Note:** I'd suggest to add WP Custom Settings main file in your theme or plugin instead of adding as standalone plugin. This way you can modify it as per your need and avoid dependency.
+## Installation
+
+The plugin is available as a [Composer package](https://packagist.org/packages/chandrapatel/wp-custom-settings).
+
+```
+composer require chandrapatel/wp-custom-settings
+```
+
+**Note:** If you are not using Composer then I'd suggest to add WP Custom Settings main file in your theme or plugin instead of adding as standalone plugin. This way you can modify it as per your need and avoid dependency.
 
 ## Usage
 
