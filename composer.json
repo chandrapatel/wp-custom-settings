@@ -1,0 +1,22 @@
+{
+	"name": "chandrapatel/wp-custom-settings",
+	"description": "Allows developers to create a custom admin menu page with settings using Settings API without registering callbacks to every settings section and field.",
+	"keywords": ["wordpress", "plugin", "settings-api"],
+	"homepage": "https://github.com/chandrapatel/wp-custom-settings",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Chandra Patel",
+			"homepage": "https://chandrapatel.in/"
+		}
+	],
+	"type": "wordpress-muplugin",
+	"support": {
+		"issues": "https://github.com/chandrapatel/wp-custom-settings/issues",
+		"source": "https://github.com/chandrapatel/wp-custom-settings"
+	},
+	"require": {
+		"php": ">=7",
+		"composer/installers": "^1.2"
+	}
+}
