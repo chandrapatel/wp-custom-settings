@@ -5,6 +5,10 @@
  * @package wp-custom-settings
  */
 
+use WP_Custom_Settings\WP_Custom_Settings;
+use WP_Custom_Settings\WP_Custom_Settings_Section;
+use WP_Custom_Settings\WP_Custom_Settings_Field;
+
 /**
  * An example of adding a custom settings page.
  *

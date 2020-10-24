@@ -20,6 +20,8 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+namespace WP_Custom_Settings;
+
 /**
  * Manage to add menu page, register setting, settings section, and fields.
  */
