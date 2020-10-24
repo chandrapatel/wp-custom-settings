@@ -1,0 +1,12 @@
+* text eol=lf
+*.jpg -text
+*.png -text
+
+.git                export-ignore
+.gitignore          export-ignore
+.gitattributes      export-ignore
+.vscode/            export-ignore
+composer.json       export-ignore
+phpcs.xml           export-ignore
+screenshot.png      export-ignore
+example.php         export-ignore
